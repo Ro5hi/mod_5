@@ -1,4 +1,4 @@
-##To-do:
+## To-do:
 
 - RAILS Tasks 
     - Create models
@@ -15,9 +15,11 @@
     - Style with a CSS franework (?)
     - Find supporting API(?)
 
-##Done:
+
+## Done:
 
 - Made Rails API
 - Made React front-end
 - Created PGSQL database
 - Merged both branches into one
+- Used Figma, wireframed a prototype of Rigger
