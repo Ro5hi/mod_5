@@ -1,4 +1,4 @@
-#To-do:
+##To-do:
 
 - RAILS Tasks 
     - Create models
@@ -11,7 +11,11 @@
     - Make reducers
     - Make actions
 
-#Done:
+- Optional Tasks
+    - Style with a CSS franework (?)
+    - Find supporting API(?)
+
+##Done:
 
 - Made Rails API
 - Made React front-end
