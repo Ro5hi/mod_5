@@ -1,8 +1,6 @@
 ## To-do:
 
-- RAILS Tasks 
-    - Create models
-    - Create controllers
+- RAILS Tasks
     - Make database migrations
 
 - REACT Tasks
@@ -19,8 +17,10 @@
 ## Done:
 
 - Made Rails API
-- Modified routes, made port 3001 accessible
+    - Create models
+    - Create controllers
+    - Modified routes, made port 3001 accessible
+    - Created PGSQL database
 - Made React front-end
-- Created PGSQL database
-- Merged both branches into one
 - Used Figma, wireframed a prototype of Rigger
+- Merged both branches into one
