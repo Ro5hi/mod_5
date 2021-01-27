@@ -1,7 +1,9 @@
 ## To-do:
 
 - RAILS Tasks
-    - Make database migrations
+    - Define CRUD actions
+    - Apply Serializers
+
 
 - REACT Tasks
     - Make presentational components
@@ -21,6 +23,8 @@
     - Create controllers
     - Modified routes, made port 3001 accessible
     - Created PGSQL database
+    - Made database migrations
+    - Modified PSQL port to 5433 (debugged connection errors)
 - Made React front-end
 - Used Figma, wireframed a prototype of Rigger
 - Merged both branches into one
