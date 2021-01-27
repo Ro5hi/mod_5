@@ -19,6 +19,7 @@
 ## Done:
 
 - Made Rails API
+- Modified routes, made port 3001 accessible
 - Made React front-end
 - Created PGSQL database
 - Merged both branches into one
