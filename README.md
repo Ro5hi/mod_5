@@ -5,11 +5,9 @@
 
 
 - REACT Tasks
-    - Make presentational components
-    - Make functional components
-    - Make reducers for builds and parts CRUD 
     - Make actions for builds and parts 
     - Have backend display in the frontend
+    - Test fetch
 
 - Optional Tasks
     - Style with a CSS franework (?)
@@ -28,6 +26,8 @@
     - Updated CRUD actions
     - Applied Serializers
 
-- Made React front-end
+- Made React front-end 
+    - Added basic reducers 
+
 - Used Figma, wireframed a prototype of Rigger
 - Merged both branches into one
