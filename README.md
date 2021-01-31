@@ -1,8 +1,7 @@
 ## To-do:
 
 - RAILS Tasks
-    - Define CRUD actions
-    - Apply Serializers
+    - Test CRUD actions
 
 
 - REACT Tasks
