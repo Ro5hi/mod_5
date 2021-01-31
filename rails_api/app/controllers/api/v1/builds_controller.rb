@@ -21,7 +21,7 @@ class API::V1::BuildsController < ApplicationController
     private 
 
     def create_params 
-        params.require(:build).permit(:parts, :description)
+        params.require(:build).permit(:description, :parts)
     end
 
     def set_build
