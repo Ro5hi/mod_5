@@ -27,7 +27,11 @@
     - Applied Serializers
 
 - Made React front-end 
-    - Added basic reducers 
+    - Added reducers 
+    - Added actions
+    - Made file structure for components
+    - Applied middleWare & Router
+    - Created a store
 
 - Used Figma, wireframed a prototype of Rigger
 - Merged both branches into one
