@@ -3,7 +3,7 @@ const initialState = {
     description: "",
 }
 
-    const buildForm = (state=initialState, action) => {
+    const buildReducer = (state=initialState, action) => {
         switch (action.type) {
             case "BUILD_ADDED":
                 const input = {
