@@ -8,6 +8,8 @@
     - Make actions for builds and parts 
     - Have backend display in the frontend
     - Test fetch
+    - Build forms
+    - Display presentational components
 
 - Optional Tasks
     - Style with a CSS franework (?)
@@ -32,6 +34,8 @@
     - Made file structure for components
     - Applied middleWare & Router
     - Created a store
+    - Created Navbar 
+    - Made additional stateless components
 
 - Used Figma, wireframed a prototype of Rigger
 - Merged both branches into one
