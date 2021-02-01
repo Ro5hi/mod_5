@@ -1,11 +1,11 @@
-class API::V1::BuildsController < ApplicationController
+class Api::V1::BuildsController < ApplicationController
 
     def index
         @build = Build.all 
     end 
 
     def show 
-        render json: BuildSerializer.new(@build), status: :ok
+        render json: @build
     end 
 
     def create 

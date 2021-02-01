@@ -1,4 +1,4 @@
-class API::V1::PartsController < ApplicationController
+class Api::V1::PartsController < ApplicationController
 
     def index
         @parts = Part.all 
