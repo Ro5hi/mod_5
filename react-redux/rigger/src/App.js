@@ -1,18 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Route, Switch, withRouter } from 'react-router-dom'
-
-import { allParts } from './actions/partsList'
-import { allBuilds } from './actions/build'
+import { Route, Switch } from 'react-router-dom'
 
 import Nav from './components/presentational/Nav'
 import CreatedBuilds from './components/presentational/CreatedBuilds'
-import Parts from './components/functional/Parts'
+import Parts from './components/class/Parts'
 import CreateABuild from './components/class/CreateABuild'
 import AddParts from './components/class/AddParts'
 
   class App extends Component {
-    
+
     render() {
       return (
         <div>
