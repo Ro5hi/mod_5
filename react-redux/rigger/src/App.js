@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 
 import Nav from './components/presentational/Nav'
 import CreatedBuilds from './components/presentational/CreatedBuilds'
-import Parts from './components/class/Parts'
+import Parts from './components/presentational/Parts'
 import CreateABuild from './components/class/CreateABuild'
 import AddParts from './components/class/AddParts'
 
