@@ -5,13 +5,13 @@ const initialState = {
 
     const buildForm = (state=initialState, action) => {
         switch (action.type) {
-            case "CREATED_BUILD":
+            case "BUILD_ADDED":
                 const input = {
                     ...state,
                     [action.buildData.name]: action.buildData.value 
                 }
                 return input 
-        case "RESET_BUILD_FORM":
+        case "RESET_BUILD":
             return initialState
         default: 
             return state; 

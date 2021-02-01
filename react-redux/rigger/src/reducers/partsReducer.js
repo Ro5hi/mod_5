@@ -6,7 +6,7 @@ const initialState = {
 
     const part = (state=initialState, action) => {
         switch (action.type) {
-            case "ADDED PARTS":
+            case "ADD_PART":
                 const input = {
                     ...state,
                     [action.partData.name]: action.partData.value

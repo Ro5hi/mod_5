@@ -50,7 +50,7 @@ export const addBuild = (build, history) => {
             } else {
                 console.log("Added build:", build)
                 dispatch(addbuild(build.data))
-                dispatch(resetbuildForm())
+                dispatch(resetBuildForm())
                 history.push(`/builds`)
             }
         })
