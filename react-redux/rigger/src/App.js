@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Route, Switch, withRouter } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { allParts } from './actions/partsList'
+import { allBuilds } from './actions/build'
 
-export default App;
+import Nav from './components/presentational/Nav'
+import CreatedBuilds from './components/presentational/CreatedBuilds'
+import Parts from './components/functional/Parts'
+import CreateABuild from './components/class/CreateABuild'
+import AddParts from './components/class/AddParts'
+
+  class App extends Component {
+    
+    render() {
+      return (
+        <div>
+          <Nav />
+          <Switch>
+            <Route exact path='/parts' component={Parts}/>
+            <Route exact path='/builds' component={CreatedBuilds}/>
+            <Route exact path='/newbuild' component={CreateABuild}/>
+            <Route exact path='/addpart' component={AddParts}/>
+          </Switch>
+        </div>
+      )
+    }
+  }
+
+  export default connect(null)(App)

@@ -34,7 +34,7 @@ export const getParts = () => {
     }
 }
 
-export const addPart = (part, history) => {
+export const newPart = (part, history) => {
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/addpart", {
             credentials: "include",
