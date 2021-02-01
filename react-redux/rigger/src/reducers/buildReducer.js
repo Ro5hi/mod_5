@@ -3,7 +3,7 @@ const initialState = {
     description: "",
 }
 
-    const buildReducer = (state=initialState, action) => {
+    export const buildReducer = (state=initialState, action) => {
         switch (action.type) {
             case "BUILD_ADDED":
                 const input = {
@@ -17,5 +17,3 @@ const initialState = {
             return state; 
         }
     }
-
-export default buildReducer 

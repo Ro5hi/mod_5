@@ -4,7 +4,7 @@ const initialState = {
     component: ""
 }
 
-    const partsReducer = (state=initialState, action) => {
+    export const partsReducer = (state=initialState, action) => {
         switch (action.type) {
             case "ADD_PART":
                 const input = {
@@ -18,5 +18,3 @@ const initialState = {
                 return state;
         }
     }
-
-export default partsReducer
