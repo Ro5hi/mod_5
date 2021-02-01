@@ -36,7 +36,7 @@ export const getbuilds = () => {
 
 export const addBuild = (build, history) => {
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/addbuild", {
+        return fetch("http://localhost:3001/api/v1/newbuild", {
             credentials: "include",
             method: "POST",
             body: JSON.stringify(build),
