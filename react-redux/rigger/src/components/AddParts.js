@@ -30,7 +30,7 @@ import { updatePartForm } from '../actions/forms'
         handlePrice = e => {
             const { name, value } = e.target
             this.setState({
-                price: e.target.value 
+                price: e.target.value
             })
         }
 
@@ -38,9 +38,9 @@ import { updatePartForm } from '../actions/forms'
             e.preventDefault()
             this.props.newPart(this.state)
             this.setState({
-                name: "",
-                component: "",
-                price: ""
+                name: this.state.name,
+                component: this.state.component,
+                price: this.state.price
             })
         }
 

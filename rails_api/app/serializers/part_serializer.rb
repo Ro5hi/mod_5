@@ -1,6 +1,6 @@
 class PartSerializer
     include FastJsonapi::ObjectSerializer 
 
-    attributes :name :price :component
+    attributes :name, :price, :component
     
 end
