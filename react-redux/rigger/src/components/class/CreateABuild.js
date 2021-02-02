@@ -1,9 +1,49 @@
-// imports here 
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addBuild } from './actions/partsList'
 
-//constructor 
+    class CreateABuild extends Component { 
+        constructor() {
+            super() 
+            this.state = {
+                name: "",
+                description: ""
+            }
+        }
 
-//handle state changes
+        handleChange = e => {
+            const { name, value } = e.target
+            this.setState({ [name]: value})
+        }
 
-//input type divs
+        handleSubmit = e => {
+            e.preventDefault()
+            this.props.addBuild(this.state)
+            this.setState({
+                name: "",
+                description: ""
+            })
+        }
 
-//connect will be null
+        render(){
+            return (
+                <div>
+                    <form onSubmit={this.handleSubmit}>
+                        <input 
+                            type="text"
+                            className="buildName"
+                            onChange={this.handleChange}
+                            value={this.state.name} />
+                        <input 
+                            type="text"
+                            className="description"
+                            onChange={this.handleChange}
+                            value={this.state.description} />
+                        <input type="submit" value="submit" />
+                    </form>
+                </div>
+            )
+        }
+    }
+
+export default connect(null, { addBuild })(CreateABuild)
