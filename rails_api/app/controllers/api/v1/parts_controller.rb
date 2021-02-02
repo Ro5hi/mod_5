@@ -9,6 +9,16 @@ class Api::V1::PartsController < ApplicationController
         render json: PartSerializer.new(@part), status: :ok 
     end 
 
+    def create 
+        @part = Part.build(create_params)
+        if @part.save 
+            render json: PartSerializer.new(@part), status: :ok
+        else 
+            @part == 0 
+            render json: @part.error 
+        end 
+    end 
+
     def update 
         @part.destroy 
         flash[:notice] = "Updated parts."
@@ -24,7 +34,7 @@ class Api::V1::PartsController < ApplicationController
     private 
 
     def create_params
-        params.require(:part).permit(:name, :price, :component)
+        params.require(:part).permit(:id, :name, :price, :component)
     end
 
     def set_part 
