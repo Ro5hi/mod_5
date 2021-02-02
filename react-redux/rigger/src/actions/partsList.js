@@ -58,7 +58,6 @@ export const newPart = (id, part) => {
                 console.log("Added part:", part)
                 dispatch(addPart(part.data))
                 dispatch(resetPartForm())
-                history.push(`/parts`)
             }
         })
         .catch(console.log)

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import AddParts from './AddParts'
 import { connect } from 'react-redux'
-import { newPart } from '../actions/partsList'
+import { addBuild } from '../actions/build'
+import { updateBuildForm } from '../actions/forms'
 
 
     class CreateABuild extends Component { 
@@ -12,9 +14,18 @@ import { newPart } from '../actions/partsList'
             }
         }
 
-        handleChange = e => {
+        handleName = e => {
             const { name, value } = e.target
-            this.setState({ [name]: value})
+            this.setState({
+                name: e.target.value
+            })
+        }
+
+        handleDescription = e => {
+            const { name, value } = e.target
+            this.setState({
+                description: e.target.value
+            })
         }
 
         handleSubmit = e => {
@@ -29,22 +40,25 @@ import { newPart } from '../actions/partsList'
         render(){
             return (
                 <div>
+                    <AddParts />
                     <form onSubmit={this.handleSubmit}>
                         <input 
                             type="text"
                             className="buildName"
-                            onChange={this.handleChange}
+                            placeholder="Name your build"
+                            onChange={this.handleName}
                             value={this.state.name} />
                         <input 
                             type="text"
                             className="description"
-                            onChange={this.handleChange}
+                            placeholder="About your build"
+                            onChange={this.handleDescription}
                             value={this.state.description} />
-                        <input type="submit" value="submit" />
+                        <input type="submit" value="Share Build" />
                     </form>
                 </div>
             )
         }
     }
 
-export default connect(null, { newPart })(CreateABuild)
+export default connect(null, { addBuild, updateBuildForm })(CreateABuild)

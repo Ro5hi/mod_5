@@ -1,7 +1,7 @@
 export const updatePartForm = (name, value) => {
     const partForm = { name, value } 
     return {
-        type: "UPDATE_PART_FORM",
+        type: "PART_FORM",
         partForm 
     }
 }
@@ -18,10 +18,10 @@ export const deletePart = () => {
     }
 }
 
-export const updateBuild = (name, value) => {
+export const updateBuildForm = (name, value) => {
     const buildForm = { name, value } 
     return {
-        type: "UPDATE_BUILD",
+        type: "BUILD_FORM",
         buildForm 
     }
 }

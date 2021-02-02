@@ -6,7 +6,7 @@ const initialState = {
 
     export const partsReducer = (state=initialState, action) => {
         switch (action.type) {
-            case "ADD_PART":
+            case "PART_FORM":
                 const input = {
                     ...state,
                     [action.partData.name]: action.partData.value

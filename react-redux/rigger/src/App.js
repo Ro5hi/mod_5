@@ -4,8 +4,8 @@ import { Route, Switch } from 'react-router-dom'
 
 import Nav from './components/presentational/Nav'
 import CreatedBuilds from './components/presentational/CreatedBuilds'
-import CreateABuild from './components/forms/CreateABuild'
-import AddParts from './components/forms/AddParts'
+import CreateABuild from './components/CreateABuild'
+import AddParts from './components/AddParts'
 
   class App extends Component {
 

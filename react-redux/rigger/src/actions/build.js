@@ -34,9 +34,9 @@ export const getbuilds = () => {
     }
 }
 
-export const addBuild = (build, history) => {
+export const addBuild = (id, build) => {
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/newbuild", {
+        return fetch("http://localhost:3001/api/v1/newbuild/${id}", {
             credentials: "include",
             method: "POST",
             body: JSON.stringify(build),
@@ -51,7 +51,6 @@ export const addBuild = (build, history) => {
                 console.log("Added build:", build)
                 dispatch(addbuild(build.data))
                 dispatch(resetBuildForm())
-                history.push(`/builds`)
             }
         })
         .catch(console.log)
