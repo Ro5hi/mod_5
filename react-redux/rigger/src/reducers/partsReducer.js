@@ -12,9 +12,11 @@ const initialState = {
                     [action.partData.name]: action.partData.value
                 }
                 return input 
+            case "REMOVE_PART":
+                return {parts: state.todos.filter(part => part !== action.payload)}
+            default:
+                return state 
             case "RESET_PART_FORM":
-                return initialState
-            default: 
-                return state;
+                return state
         }
     }

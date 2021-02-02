@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addBuild } from './actions/partsList'
+import { newPart } from '../actions/partsList'
+
 
     class CreateABuild extends Component { 
         constructor() {
@@ -46,4 +47,4 @@ import { addBuild } from './actions/partsList'
         }
     }
 
-export default connect(null, { addBuild })(CreateABuild)
+export default connect(null, { newPart })(CreateABuild)

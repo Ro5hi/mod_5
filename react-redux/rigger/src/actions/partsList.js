@@ -14,6 +14,13 @@ export const addPart = part => {
     }
 }
 
+export const removePart = part => {
+    return {
+        type: "REMOVE_PART",
+        part 
+    }
+}
+
 export const getParts = () => {
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/parts", {
@@ -34,9 +41,9 @@ export const getParts = () => {
     }
 }
 
-export const newPart = (part, history) => {
+export const newPart = (id, part) => {
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/addpart", {
+        return fetch("http://localhost:3001/api/v1/addpart/${id}", {
             credentials: "include",
             method: "POST",
             body: JSON.stringify(part),
