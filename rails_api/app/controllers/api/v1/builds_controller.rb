@@ -1,5 +1,7 @@
 class Api::V1::BuildsController < ApplicationController
 
+    before_action :set_build, only: [:show, :create]
+
     def index
         @build = Build.all 
     end 
@@ -9,19 +11,19 @@ class Api::V1::BuildsController < ApplicationController
     end 
 
     def create 
-        @build = Build.build(create_params)
-        if @build.save 
+        @build = Build.new
+        if @build.save
             render json: BuildSerializer.new(@build), status: :ok
         else 
             @build == 0 
             render json: @build.error 
-        end 
+        end
     end 
     
     private 
 
     def create_params 
-        params.require(:build).permit(:description, :parts)
+        params.permit(:build, :id, :description, :parts)
     end
 
     def set_build

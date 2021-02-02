@@ -1,5 +1,7 @@
 class Api::V1::PartsController < ApplicationController
 
+    before_action :set_part, only: [:show, :create, :update, :destroy]
+
     def index
         @parts = Part.all 
         render json: PartSerializer.new(@parts), status: :ok
@@ -10,12 +12,12 @@ class Api::V1::PartsController < ApplicationController
     end 
 
     def create 
-        @part = Part.build(create_params)
-        if @part.save 
+        @part = Part.new 
+        if @part.save
             render json: PartSerializer.new(@part), status: :ok
         else 
             @part == 0 
-            render json: @part.error 
+            render json: @part.errors
         end 
     end 
 
@@ -34,7 +36,7 @@ class Api::V1::PartsController < ApplicationController
     private 
 
     def create_params
-        params.require(:part).permit(:id, :name, :price, :component)
+        params.permit(:part, :id, :name, :price, :component)
     end
 
     def set_part 

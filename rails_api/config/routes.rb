@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post "/api/v1/newbuild/:id", to: "api/v1/builds#create"
   delete "/api/v1/part/:id", to: "api/v1/parts#destroy"
   get "/api/v1/builds", to: "api/v1/builds#index"
-  get "/api/v1/build/:id", to: "api/v1/build#show"
+  get "/api/v1/build/:id", to: "api/v1/builds#show"
   get "/api/v1/parts", to: "api/v1/parts#index"
   get "/api/v1/parts/:id", to: "api/v1/parts#show"
   

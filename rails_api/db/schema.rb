@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2) do
   create_table "builds", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.string "parts"
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
