@@ -1,6 +1,7 @@
 const initialState = {
-    parts: "",
-    description: "",
+    name: "",
+    description: ""
+    // parts: ""
 }
 
     export const buildReducer = (state=initialState, action) => {

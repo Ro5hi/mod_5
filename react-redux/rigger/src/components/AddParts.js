@@ -16,21 +16,21 @@ import { updatePartForm } from '../actions/forms'
         handleName = e => {
             const { name, value } = e.target
             this.setState({ 
-                name: e.target.value
+                [name]: value
             })
         }
 
         handleComponent = e => {
             const { name, value } = e.target
             this.setState({
-                component: e.target.value
+                [name]: value
             })
         }
 
         handlePrice = e => {
             const { name, value } = e.target
             this.setState({
-                price: e.target.value
+                [name]: value
             })
         }
 
@@ -54,18 +54,21 @@ import { updatePartForm } from '../actions/forms'
                     <form onSubmit={this.handleSubmit}>
                         <input 
                             type="text"
+                            name="name"
                             className="partName"
                             placeholder="Name"
                             onChange={this.handleName}
                             value={this.state.name} />
                         <input 
                             type="text"
+                            name="component"
                             className="partComponent"
                             placeholder="Component"
                             onChange={this.handleComponent}
                             value={this.state.component} />
                         <input
                             type="text"
+                            name="price"
                             className="partPrice"
                             placeholder="Price"
                             onChange={this.handlePrice}

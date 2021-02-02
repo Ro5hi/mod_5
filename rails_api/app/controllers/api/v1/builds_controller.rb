@@ -23,7 +23,7 @@ class Api::V1::BuildsController < ApplicationController
     private 
 
     def create_params 
-        params.permit(:build, :id, :description)
+        params.permit(:id, :build, :description)
     end
 
     def set_build

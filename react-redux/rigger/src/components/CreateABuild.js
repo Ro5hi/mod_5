@@ -17,14 +17,14 @@ import { updateBuildForm } from '../actions/forms'
         handleName = e => {
             const { name, value } = e.target
             this.setState({
-                name: e.target.value
+                [name]: value
             })
         }
 
         handleDescription = e => {
             const { name, value } = e.target
             this.setState({
-                description: e.target.value
+                [name]: value
             })
         }
 
@@ -32,8 +32,8 @@ import { updateBuildForm } from '../actions/forms'
             e.preventDefault()
             this.props.addBuild(this.state)
             this.setState({
-                name: this.state.name,
-                description: this.state.description
+                name: "",
+                description: ""
             })
         }
 
@@ -43,13 +43,15 @@ import { updateBuildForm } from '../actions/forms'
                     <form onSubmit={this.handleSubmit}>
                         <input 
                             type="text"
+                            name="name"
                             className="buildName"
                             placeholder="Name your build"
                             onChange={this.handleName}
                             value={this.state.name} />
                         <input 
                             type="text"
-                            className="description"
+                            name="description"
+                            className="buildDescription"
                             placeholder="About your build"
                             onChange={this.handleDescription}
                             value={this.state.description} />
