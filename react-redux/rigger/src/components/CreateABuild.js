@@ -32,15 +32,15 @@ import { updateBuildForm } from '../actions/forms'
             e.preventDefault()
             this.props.addBuild(this.state)
             this.setState({
-                name: "",
-                description: ""
+                name: this.state.name,
+                description: this.state.description
             })
         }
 
         render(){
             return (
                 <div>
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={e => this.handleSubmit(e)}>
                         <input 
                             type="text"
                             name="name"
@@ -55,6 +55,7 @@ import { updateBuildForm } from '../actions/forms'
                             placeholder="About your build"
                             onChange={this.handleDescription}
                             value={this.state.description} />
+                            <br /><br />
                             <AddParts />
                             <div>
                                 <span>

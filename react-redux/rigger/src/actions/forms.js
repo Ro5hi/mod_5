@@ -12,12 +12,6 @@ export const resetPartForm = () => {
     }
 }
 
-export const deletePart = () => {
-    return {
-        type: "DELETE_PART"
-    }
-}
-
 export const updateBuildForm = (name, value) => {
     const buildForm = { name, value } 
     return {

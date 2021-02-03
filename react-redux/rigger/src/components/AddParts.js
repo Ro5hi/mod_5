@@ -36,7 +36,7 @@ import { updatePartForm } from '../actions/forms'
 
         handleSubmit = e => {
             e.preventDefault()
-            this.props.newPart(this.state)
+            this.props.newPart(this.props.part.id, this.state)
             this.setState({
                 name: this.state.name,
                 component: this.state.component,
@@ -74,11 +74,11 @@ import { updatePartForm } from '../actions/forms'
                             onChange={this.handlePrice}
                             value={this.state.price} />
                         <div>
-                            <span>{this.props.text}
+                            {this.props.part}
                                 <button onClick={() => 
-                                this.props.delete(this.props.text)}>Remove Part</button>
-                            </span>
+                                this.props.delete(this.props.part)}>Remove Part</button>
                         </div>
+                        <br /><br />
                         <div>
                             <span>
                                 <input type="submit" value="Add Part" />

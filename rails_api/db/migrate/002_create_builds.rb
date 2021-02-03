@@ -3,7 +3,6 @@ class CreateBuilds < ActiveRecord::Migration[6.0]
         create_table :builds do |t|
             t.string :name 
             t.string :description 
-            t.string :parts 
             t.datetime :remember_created_at
             t.timestamps null: false
         end 

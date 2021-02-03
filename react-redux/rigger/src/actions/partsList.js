@@ -1,5 +1,3 @@
-import { resetPartForm } from './forms.js'
-
 export const allParts = parts => {
     return {
         type: "ALL_PARTS",
@@ -43,11 +41,12 @@ export const getParts = () => {
 
 export const newPart = (id, part) => {
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/addpart/${id}", {
-            credentials: "include",
+        fetch(`http://localhost:3001/api/v1/addpart/${id}`,
+        {   credentials: "include",
             method: "POST",
             body: JSON.stringify(part),
             headers: { "Content-Type": "application/json" },
+
         })
         .then(response => response.json())
         .then(part => {
@@ -55,11 +54,9 @@ export const newPart = (id, part) => {
                 console.log("Trouble adding", part)
                 alert(part.error)
             } else {
-                console.log("Added part:", part)
-                dispatch(addPart(part.data))
-                dispatch(resetPartForm())
+                console.log("Added part", part)
+                dispatch(parts => dispatch({ type: 'ADD_PART', payload: parts}))
             }
         })
-        .catch(console.log)
     }
 }

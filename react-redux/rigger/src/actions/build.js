@@ -49,7 +49,7 @@ export const addBuild = (id, build) => {
                 alert(build.error)
             } else {
                 console.log("Added build:", build)
-                dispatch(addbuild(build.data))
+                dispatch(build => dispatch({ type: 'BUILD_ADDED', payload: build}))
                 dispatch(resetBuildForm())
             }
         })

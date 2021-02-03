@@ -7,13 +7,9 @@ const initialState = {
     export const partsReducer = (state=initialState, action) => {
         switch (action.type) {
             case "PART_FORM":
-                const input = {
-                    ...state,
-                    [action.partData.name]: action.partData.value
-                }
-                return input 
+                return action.payload
             case "REMOVE_PART":
-                return {parts: state.todos.filter(part => part !== action.payload)}
+                return {parts: state.part.filter(part => part !== action.payload)}
             default:
                 return state 
             case "RESET_PART_FORM":

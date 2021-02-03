@@ -7,7 +7,6 @@ export default class Nav extends Component {
             <div>
                 <ul><NavLink exact to="/builds">Builds List</NavLink></ul>
                 <ul><NavLink exact to="/newbuild">New Build</NavLink></ul>
-                // navigational bar links go here if needed
             </div>
         )
     }
