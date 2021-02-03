@@ -12,12 +12,23 @@ export const addPart = part => {
     }
 }
 
+export const anotherPart = part => {
+    return {
+        type: "ANOTHER_PART",
+        payload: {
+            id: ++part,
+            part
+        }
+    }
+}
+
 export const removePart = part => {
     return {
         type: "REMOVE_PART",
-        part 
+        part
     }
 }
+
 
 export const getParts = () => {
     return dispatch => {
@@ -46,7 +57,6 @@ export const newPart = (id, part) => {
             method: "POST",
             body: JSON.stringify(part),
             headers: { "Content-Type": "application/json" },
-
         })
         .then(response => response.json())
         .then(part => {

@@ -1,6 +1,6 @@
 class Api::V1::PartsController < ApplicationController
 
-    before_action :set_part, only: [:show, :create, :update, :destroy]
+    before_action :set_part, only: [:show, :create]
 
     def index
         @parts = Part.all 
@@ -19,18 +19,6 @@ class Api::V1::PartsController < ApplicationController
             @part == 0 
             render json: @part.errors
         end 
-    end 
-
-    def update 
-        @part.destroy 
-        flash[:notice] = "Updated parts."
-        render json: @part 
-    end
-
-    def destroy 
-        @part.destroy
-        flash[:notice] = "Part deleted."
-        render json: @part 
     end
 
     private 

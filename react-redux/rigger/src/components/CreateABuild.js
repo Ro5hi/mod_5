@@ -14,23 +14,24 @@ import { updateBuildForm } from '../actions/forms'
             }
         }
 
-        handleName = e => {
-            const { name, value } = e.target
+        handleName = event => {
+            const { name, value } = event.target
             this.setState({
                 [name]: value
             })
         }
 
-        handleDescription = e => {
-            const { name, value } = e.target
+        handleDescription = event => {
+            const { name, value } = event.target
             this.setState({
                 [name]: value
             })
         }
 
-        handleSubmit = e => {
-            e.preventDefault()
-            this.props.addBuild(this.state)
+        handleSubmit = event => {
+            event.preventDefault()
+            const build = {...this.state}
+            this.props.addBuild(build)
             this.setState({
                 name: this.state.name,
                 description: this.state.description

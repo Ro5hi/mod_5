@@ -22,11 +22,4 @@
 //     }
 // }
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         delete: partText => dispatch({type: "REMOVE_PART",
-//         payload: partText })
-//     }
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(PartContainer)
+// export default connect(null, mapStateToProps)(PartContainer)

@@ -3,8 +3,8 @@ import { buildReducer } from './buildReducer'
 import { partsReducer } from './partsReducer'
 
     const rootReducer = combineReducers({
-        builds: buildReducer,
-        parts: partsReducer
+        buildReducer,
+        partsReducer
     })
 
 export default rootReducer

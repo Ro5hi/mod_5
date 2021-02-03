@@ -3,7 +3,8 @@ class Api::V1::BuildsController < ApplicationController
     before_action :set_build, only: [:show, :create]
 
     def index
-        @build = Build.all 
+        @builds = Build.all 
+        render json: BuildSerializer.new(@builds)
     end 
 
     def show 
@@ -11,7 +12,7 @@ class Api::V1::BuildsController < ApplicationController
     end 
 
     def create 
-        @build = Build.new
+        @build = Build.new(create_params)
         if @build.save
             render json: BuildSerializer.new(@build), status: :ok
         else 

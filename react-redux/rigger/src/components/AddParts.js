@@ -13,6 +13,11 @@ import { updatePartForm } from '../actions/forms'
             }
         }
 
+        handleAddAPart = () => {
+            this.props.addParts(this.state.input)
+            this.setState({ input: "" })
+        }
+
         handleName = e => {
             const { name, value } = e.target
             this.setState({ 
@@ -44,7 +49,8 @@ import { updatePartForm } from '../actions/forms'
             })
         }
 
-        handleDelete() {
+        handleDelete = e => {
+            e.preventDefault()
             this.props.actions.deletePart(this.props.part.id)
         }
 
@@ -78,12 +84,18 @@ import { updatePartForm } from '../actions/forms'
                                 <button onClick={() => 
                                 this.props.delete(this.props.part)}>Remove Part</button>
                         </div>
-                        <br /><br />
                         <div>
                             <span>
-                                <input type="submit" value="Add Part" />
+                                <input type="submit" value="List Part" />
                             </span>
                         </div>
+                        <br /> <br />
+                        <span>
+                            <button onClick={this.handleAddAPart}>
+                                Add Another Part
+                            </button>
+                        </span>
+                        
                     </form>
                 </div>
             )

@@ -6,7 +6,7 @@ const initialState = {
 
     export const partsReducer = (state=initialState, action) => {
         switch (action.type) {
-            case "PART_FORM":
+            case "ADD_PART":
                 return action.payload
             case "REMOVE_PART":
                 return {parts: state.part.filter(part => part !== action.payload)}
